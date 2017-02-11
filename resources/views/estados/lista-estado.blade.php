@@ -48,7 +48,14 @@
                             @foreach($user as $u)
                                 <li>
                                     <a class="users-list-name" href="#">{{ $u->name }}</a>
-                                    <span class="users-list-date">{{ $u->perfil }}</span>
+                                    <span class="users-list-date">
+                                        @if($u->perfil == 'user_admin')
+                                            <span class="label label-default">Admin</span>
+                                        @endif
+                                        @if($u->perfil == 'user_normal')
+
+                                        @endif
+                                    </span>
                                 </li>
                             @endforeach
                         </ul>

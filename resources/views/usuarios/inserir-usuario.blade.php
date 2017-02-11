@@ -45,7 +45,14 @@
                                     <td>{{ $d->id }}</td>
                                     <td>{{ $d->name }}</td>
                                     <td>{{ $d->email }}</td>
-                                    <td>{{ $d->perfil }}</td>
+                                    <td>
+                                        @if($d->perfil == 'user_admin')
+                                            <span class="label label-default">Admin</span>
+                                        @endif
+                                        @if($d->perfil == 'user_normal')
+
+                                        @endif
+                                    </td>
                                     <td>
                                         <button class="btn btn-warning" data-toggle="modal" data-target="#editModal" onclick="fun_edit('{{$d -> id}}')">
                                             <i class="fa fa-edit"></i>
