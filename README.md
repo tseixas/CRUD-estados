@@ -1,3 +1,4 @@
 # ProjetoEstados
-# ProjetoEstados
-# CRUD-estados
+# Tecnologias utilizadas
+Laravel 5
+Mysql
